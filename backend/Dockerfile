@@ -7,7 +7,6 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
-# Copy the exact jar name
 RUN cp target/tracker-*.jar app.jar
 
 EXPOSE 8080
